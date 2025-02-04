@@ -20,3 +20,23 @@ Dans le cas de l'usage de pyenv et de poetry, exécuter les commandes suivantes 
 pyenv install 3.11
 poetry env use python3.11
 ```
+
+Il est alors possible de vérifier la version installée avec `poetry run python --version`.
+
+## Installation des dépendances
+
+À la racine du dépôt, exécuter :
+
+```bash
+poetry install --no-root
+```
+
+## Exécution de l'API web
+
+Exécuter la commande suivante :
+
+```bash
+poetry run openfisca serve --country-package openfisca_france
+```
+
+L'API web est alors accessible localement sur `http://127.0.0.1:5000`.
