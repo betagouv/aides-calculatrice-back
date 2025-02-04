@@ -9,6 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 openfisca-france = "^169.15.0"
+openfisca-core = {extras = ["web-api"], version = "^43.2.7"}
 
 
 [build-system]
