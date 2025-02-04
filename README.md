@@ -13,3 +13,10 @@ Celui-ci peut-être utilisé avec Poetry ([documentation d'installation](https:/
 ### Quelle version de Python ?
 
 Ce dépôt s'appuie sur des modèles de la législation open source. Le modèle Python appelé étant [OpenFisca](https://openfisca.org/fr), ce dépôt choisira la version de Python la plus récente supportée par la librairie [openfisca-france](https://github.com/openfisca/openfisca-france) dont il dépend.
+
+Dans le cas de l'usage de pyenv et de poetry, exécuter les commandes suivantes pour choisir la version de Python et la transmettre à l'environnement virtuel : 
+
+```bash
+pyenv install 3.11
+poetry env use python3.11
+```
