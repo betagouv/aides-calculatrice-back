@@ -60,7 +60,7 @@
                 "2025-01": false
             },
             "logement_conventionne": {
-                "2025-01": null
+                "2025-01": true
             },
             "logement_crous": {
                 "2025-01": false

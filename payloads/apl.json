@@ -59,6 +59,9 @@
             "coloc": {
                 "2025-01": false
             },
+            "logement_conventionne": {
+                "2025-01": true
+            },
             "zone_apl": {
                 "2025-01": null
             }
