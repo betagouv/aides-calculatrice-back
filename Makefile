@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
+
+GREEN = '\033[0;32m'
+COLOR_OFF = '\033[0m'
+POETRY_CURRENT_ENV_PATH := $(shell poetry env info -p)
+
 all: install api
 
 install:
+	@echo $(GREEN)"Using virtualenv: "$(POETRY_CURRENT_ENV_PATH)$(COLOR_OFF)
 	poetry install --no-root
 
 api:
