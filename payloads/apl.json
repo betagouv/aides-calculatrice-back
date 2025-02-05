@@ -1,0 +1,56 @@
+{
+    "individus": {
+        "Camille": {},
+        "Claude": {
+            "salaire_de_base": {
+                "2025-01": 1801.80
+            }
+        },
+        "Dominique": {
+            "salaire_de_base": {
+                "2025-01": 1801.80
+            }
+        }
+    },
+    "foyers_fiscaux": {
+        "foyer_fiscal_1": {
+            "declarants": [
+                "Claude",
+                "Dominique"
+            ],
+            "personnes_a_charge": [
+                "Camille"
+            ]
+        }
+    },
+    "menages": {
+        "menage_1": {
+            "conjoint": [
+                "Dominique"
+            ],
+            "enfants": [
+                "Camille"
+            ],
+            "personne_de_reference": [
+                "Claude"
+            ],
+            "revenu_disponible": {
+                "2025": null
+            }
+        }
+    },
+    "familles": {
+        "famille_1": {
+            "enfants": [
+                "Camille"
+            ],
+            "parents": [
+                "Claude",
+                "Dominique"
+            ],
+            "apl": {
+                "2025-01": null
+            }
+        }
+    }
+}
