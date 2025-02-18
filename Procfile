@@ -1,1 +1,1 @@
-web: poetry run openfisca serve --country-package openfisca_france
+web: openfisca serve --country-package openfisca_france
