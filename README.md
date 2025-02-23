@@ -28,7 +28,7 @@ Il est alors possible de vérifier la version installée avec `poetry run python
 À la racine du dépôt, exécuter :
 
 ```bash
-poetry install --no-root
+poetry install
 ```
 
 ## Exécution de l'API web
