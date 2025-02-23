@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aides-calculatrice-back"
-version = "0.0.1"
+version = "0.0.2"
 description = "Le dorsal d'aides-simplifiées"
 authors = ["Aides Simplifiées <aides.simplifiees@numerique.gouv.fr>"]
 license = "AGPL-3.0-or-later"
