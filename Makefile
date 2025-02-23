@@ -9,7 +9,7 @@ all: install api
 
 install:
 	@echo $(GREEN)"Using virtualenv: "$(POETRY_CURRENT_ENV_PATH)$(COLOR_OFF)
-	poetry install --no-root
+	poetry install
 
 api:
 	poetry run openfisca serve --country-package openfisca_france
