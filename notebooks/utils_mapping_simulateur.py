@@ -124,9 +124,3 @@ def format_to_openfisca_json(aides_simplifiees_test_case, period):
 
     return openfisca_test_case
 
-
-def affiche_resultat(notion_testee: str, texte_condition: str, bilan_condition: bool, valeur_condition: float):
-	symbole = "✅" if bilan_condition else "❌"
-
-	print(f"{symbole} {texte_condition}")
-	print(f"{notion_testee} : {valeur_condition}")
