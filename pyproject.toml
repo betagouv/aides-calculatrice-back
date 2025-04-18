@@ -15,7 +15,7 @@ python = "^3.11"
 pip = "^24.3.1"
 setuptools = "^75.7.0"
 
-openfisca-france = "^169.15.0"
+openfisca-france = "^170.1.12"
 openfisca-core = {extras = ["web-api"], version = "^43.2.7"}
 
 

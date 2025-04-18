@@ -720,14 +720,14 @@ web-api = ["Flask (>=2.2.3,<3.0)", "Flask-Cors (>=3.0.10,<4.0)", "Werkzeug (>=2.
 
 [[package]]
 name = "openfisca-france"
-version = "169.15.0"
+version = "170.1.12"
 description = "OpenFisca Rules as Code model for France."
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "OpenFisca_France-169.15.0-py3-none-any.whl", hash = "sha256:6954a33ade5eb71fbe76a72d4689109f623f6253c8715155007cf8b1e388ce65"},
-    {file = "openfisca_france-169.15.0.tar.gz", hash = "sha256:1b87bd5762d9289b6a053401e2165ae56ce4d5204b760eab92b4d4ed34e18651"},
+    {file = "openfisca_france-170.1.12-py3-none-any.whl", hash = "sha256:535b9026565465af087aab67239c1d288e61845dd7488113a030566f4209bc36"},
+    {file = "openfisca_france-170.1.12.tar.gz", hash = "sha256:1c3dee1b0e70262f945d7afa8029f428eeae0a396f59c076c202df0e2ac26914"},
 ]
 
 [package.dependencies]
@@ -1439,4 +1439,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.11"
-content-hash = "eab7778dccb18809660f4e2952a682b80a9be2266c8a1fd296a85b4ee62c6892"
+content-hash = "3e10b03e02a341f7227c78999a8cde3345a1588cc30bb86b43e9f52112da7204"
