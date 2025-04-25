@@ -25,13 +25,6 @@ def new_simulation(tax_benefit_system, situation_json_openfisca):
     return simulation
 
 
-def affiche_resultat(notion_testee: str, texte_condition: str, bilan_condition: bool, valeur_condition: float):
-	symbole = "✅" if bilan_condition else "❌"
-
-	print(f"{symbole} {texte_condition}")
-	print(f"{notion_testee} : {valeur_condition}")
-
-
 def est_dans_intervalle(
         simulation: Simulation, nom_openfisca: str, 
         valeur_min: float, valeur_max: float, 
