@@ -2,6 +2,7 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from numpy import timedelta64
 
+from openfisca_core.parameters import Parameter
 from openfisca_core.simulation_builder import SimulationBuilder, Simulation
 from openfisca_core.taxbenefitsystems import TaxBenefitSystem
 
@@ -119,4 +120,19 @@ def non_renseignee_ou_egale_valeur_par_defaut(
 
     affiche_resultat(nom_openfisca, description, condition_truc, truc[index_entite])
     return condition_truc
-          
+
+
+def get_yearly_parameter_references(p: Parameter, year: str):
+    p_references: dict = p.metadata['reference']
+    year_references = {cle: valeur for cle, valeur in p_references.items() if cle.startswith(year)}
+    return year_references
+
+
+def get_latest_parameter_references(p: Parameter):
+    p_references: dict = p.metadata['reference']
+
+    dates = [datetime.strptime(key, '%Y-%m-%d') for key in p_references.keys()]
+    latest_date = max(dates)
+    latest_key = latest_date.strftime('%Y-%m-%d')
+
+    return p_references[latest_key]
