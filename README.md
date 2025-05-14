@@ -40,3 +40,10 @@ poetry run openfisca serve --country-package openfisca_france
 ```
 
 L'API web est alors accessible localement sur `http://127.0.0.1:5000`.
+
+## Exécution des notebooks en local
+
+Avec Jupyter : 
+```bash
+poetry run jupyter notebook ./notebooks/apl_logement_ordinaire.ipynb
+```
