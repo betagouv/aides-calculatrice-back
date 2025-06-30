@@ -4,7 +4,7 @@ def affiche_resultat(notion_testee: str, texte_condition: str, bilan_condition: 
     symbole = "✅" if bilan_condition else "❌"
 
     print(f"{symbole} {texte_condition}")
-    print(f"{notion_testee} : {valeur_condition:.2f}")  # 2 décimales
+    print(notion_testee, " : ", valeur_condition)  # 2 décimales
 
 
 def colorie_reference(valeur, reference):
