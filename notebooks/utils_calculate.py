@@ -8,6 +8,8 @@ from openfisca_core.taxbenefitsystems import TaxBenefitSystem
 
 from openfisca_france import FranceTaxBenefitSystem
 
+from utils_display import affiche_resultat
+
 
 today = datetime.now()
 today_year_month = today.strftime("%Y-%m")
