@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aides-calculatrice-back"
-version = "0.0.3"
+version = "0.0.4"
 description = "Le dorsal d'aides-simplifiées"
 authors = ["Aides Simplifiées <aides.simplifiees@numerique.gouv.fr>"]
 license = "AGPL-3.0-or-later"
@@ -18,7 +18,10 @@ setuptools = "^75.7.0"
 openfisca-france = "^170.1.12"
 openfisca-core = {extras = ["web-api"], version = "^43.2.7"}
 
-[tool.poetry.group.dev.dependencies]
+[tool.poetry.group.explain]
+optional = true
+
+[tool.poetry.group.explain.dependencies]
 ipykernel = "^6.29.5"
 pandas = "^2.2.3"
 jupyter = "^1.1.1"
