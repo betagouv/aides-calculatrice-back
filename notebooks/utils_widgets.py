@@ -8,11 +8,27 @@ def add_input(label, placeholder):
         value='',
         placeholder=placeholder if type(placeholder) == str else str(placeholder),
         description=label,
-        disabled=False
+        disabled=False,
+        layout=widgets.Layout(
+            width="300px",
+            description_width="500px"
+        )
     )
 
     return text_input
     
+
+def display_inputs(entity_roles, entity_data):
+    entity_inputs = []
+    for variable, period_value in entity_data.items():
+        if variable not in entity_roles:
+            period, value = next(iter(period_value.items()))
+            input = add_input(variable + " " + period, value)
+            entity_inputs.append(input)
+            display(input)
+
+    return entity_inputs
+
 
 def add_output():
     # Créer une zone de sortie pour afficher le message
@@ -39,7 +55,7 @@ def add_calculate_button(inputs, output):
             for input in inputs:
                 input_value = input.value
                 print(f"Bonjour, {input_value} !")
-                input.value = ""
+                # input.value = ""
 
     # Attacher la fonction de rappel au bouton
     button.on_click(on_button_click)
