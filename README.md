@@ -41,6 +41,22 @@ poetry run openfisca serve --country-package openfisca_france
 
 L'API web est alors accessible localement sur `http://127.0.0.1:5000`.
 
+### Tester une requête à l'API web
+
+Conserver l'API web active dans un terminal.  
+Dans un second terminal, interroger l'API web. Celle-ci dispose de [plusieurs endpoints](https://openfisca.org/doc/openfisca-web-api/endpoints.html).  
+Pour tester une demande de calcul on transmettra une requête POST au format JSON à `/calculate` :
+
+```bash
+cd payloads/
+curl -X POST http://127.0.0.1:5000/calculate -H 'Content-Type: application/json' -d @apl.json
+```
+
+> On peut également employer une commande supplémentaire comme [jq](https://jqlang.org) pour formater la réponse :
+> `curl -X POST http://127.0.0.1:5000/calculate -H 'Content-Type: application/json' -d @apl.json | jq`
+
+On s'attend à recevoir la réponse au format json. Pour en savoir plus sur `/calculate`, consulter sa [documentation sur openfisca.org](https://openfisca.org/doc/openfisca-web-api/input-output-data.html).
+
 ## Installation des dépendances supplémentaires pour les notebooks d'explicabilité
 
 À la racine du dépôt, exécuter :
