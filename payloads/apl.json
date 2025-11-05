@@ -2,26 +2,26 @@
     "individus": {
         "Claude": {
             "salaire_de_base": {
-                "2025-01": 1801.80
+                "2025-10": 1801.80
             },
             "handicap": {
-                "2025-01": false
+                "2025-10": false
             }
         },
         "Dominique": {
             "salaire_de_base": {
-                "2025-01": 1801.80
+                "2025-10": 1801.80
             },
             "handicap": {
-                "2025-01": false
+                "2025-10": false
             }
         },
         "Camille": {
             "salaire_de_base": {
-                "2025-01": 0.0
+                "2025-10": 0.0
             },
             "handicap": {
-                "2025-01": false
+                "2025-10": false
             }
         }
     },
@@ -48,22 +48,22 @@
                 "Claude"
             ],
             "depcom": {
-                "2025-01": "01317"
+                "2025-10": "01317"
             },
             "statut_occupation_logement": {
-                "2025-01": "locataire_vide"
+                "2025-10": "locataire_vide"
             },
             "loyer": {
-                "2025-01": 366.07
+                "2025-10": 366.07
             },
             "coloc": {
-                "2025-01": false
+                "2025-10": false
             },
             "logement_conventionne": {
-                "2025-01": true
+                "2025-10": true
             },
             "zone_apl": {
-                "2025-01": null
+                "2025-10": null
             }
         }
     },
@@ -77,13 +77,13 @@
                 "Dominique"
             ],
             "reduction_loyer_solidarite": {
-                "2025-01": null
+                "2025-10": null
             },
             "aide_logement_base_ressources": {
-                "2025-01": null
+                "2025-10": null
             },
             "apl": {
-                "2025-01": null
+                "2025-10": null
             }
         }
     }
