@@ -23,7 +23,7 @@ poetry env use python3.11
 
 Il est alors possible de vérifier la version installée avec `poetry run python --version`.
 
-## Installation des dépendances
+## Installation des dépendances pour l'API web
 
 À la racine du dépôt, exécuter :
 
@@ -40,3 +40,19 @@ poetry run openfisca serve --country-package openfisca_france
 ```
 
 L'API web est alors accessible localement sur `http://127.0.0.1:5000`.
+
+## Installation des dépendances supplémentaires pour les notebooks d'explicabilité
+
+À la racine du dépôt, exécuter :
+
+```bash
+poetry install --with explain
+```
+
+## Exécution des notebooks en local
+
+Pour exécuter avec Jupyter et dans un navigateur local un notebook tel que `apl_logement_ordinaire.ipynb`, exécuter la commande suivante à la racine du dépôt :
+
+```bash
+poetry run jupyter notebook ./notebooks/apl_logement_ordinaire.ipynb
+```

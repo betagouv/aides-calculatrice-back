@@ -1,0 +1,91 @@
+{
+    "familles": {
+        "famille_usager": {
+            "apl": {
+                "2025-06": null
+            },
+            "enfants": [],
+            "parents": [
+                "usager"
+            ],
+            "proprietaire_proche_famille": {
+                "2025-06": false
+            }
+        }
+    },
+    "foyers_fiscaux": {
+        "foyer_fiscal_usager": {
+            "declarants": [
+                "usager"
+            ],
+            "personnes_a_charge": []
+        }
+    },
+    "individus": {
+        "usager": {
+            "activite": {
+                "2025-06": "etudiant"
+            },
+            "aide_mobilite_master": {
+                "2025-06": null
+            },
+            "aide_mobilite_parcoursup": {
+                "2025-06": null
+            },
+            "date_naissance": {
+                "ETERNITY": "2001-01-01"
+            },
+            "locapass_eligibilite": {
+                "2025-06": null
+            },
+            "nationalite": {
+                "2025-06": "FR"
+            },
+            "salaire_imposable": {
+                "month:2024-06:12": 100000000000000000
+            },
+            "sortie_region_academique": {
+                "2025-06": false
+            },
+            "statut_marital": {
+                "2025-06": "celibataire"
+            }
+        }
+    },
+    "menages": {
+        "menage_usager": {
+            "charges_locatives": {
+                "2025-06": 100
+            },
+            "coloc": {
+                "2025-06": false
+            },
+            "conjoint": [],
+            "date_entree_logement": {
+                "2025-06": "2025-07"
+            },
+            "depcom": {
+                "2025-06": "93048"
+            },
+            "enfants": [],
+            "logement_conventionne": {
+                "2025-06": false
+            },
+            "loyer": {
+                "2025-06": 800
+            },
+            "personne_de_reference": [
+                "usager"
+            ],
+            "statut_occupation_logement": {
+                "2025-06": "locataire_vide"
+            },
+            "visale_eligibilite": {
+                "2025-06": null
+            },
+            "visale_montant_max": {
+                "2025-06": null
+            }
+        }
+    }
+}
