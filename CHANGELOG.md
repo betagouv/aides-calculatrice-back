@@ -1,12 +1,15 @@
 # CHANGELOG
 
-### [#5](https://github.com/betagouv/aides-calculatrice-back/pull/5)
+### 0.0.4 [#5](https://github.com/betagouv/aides-calculatrice-back/pull/5)
 
 * Ajouts sans impact sur la réutilisation de l'API web.
 * Détail :
-  * Ajoute un notebook d'explication de l'APL en logement ordinaire `notebooks/apl_logement_ordinaire.ipynb`, part spécifique de `notebooks/apl.ipynb`
-  * Initialise un notebook d'explication de la garantie visale
+  * Ajoute un notebook d'explication de l'`APL` en logement ordinaire `notebooks/apl_logement_ordinaire.ipynb`, part spécifique de `notebooks/apl.ipynb`
+  * Expérimente l'emploi d'`ipywidgets` dans `notebooks/apl_logement_ordinaire_interactif.ipynb`
+  * Initialise un notebook d'explication de la `garantie visale`
   * Ajoute un exemple de requête de Garantie visale `payloads/visale.json`
+  * Documente dans le `README` l'usage des notebooks d'explicabilité
+  
 
 ### 0.0.3 [#4](https://github.com/betagouv/aides-calculatrice-back/pull/4)
 
