@@ -1,0 +1,90 @@
+{
+  "familles": {
+    "famille_1": {
+      "aide_logement_base_ressources": {
+        "2025-01": 0.0
+      },
+      "apl": {
+        "2025-01": 287.04
+      },
+      "enfants": [
+        "Camille"
+      ],
+      "parents": [
+        "Claude",
+        "Dominique"
+      ],
+      "reduction_loyer_solidarite": {
+        "2025-01": 54.92
+      }
+    }
+  },
+  "foyers_fiscaux": {
+    "foyer_fiscal_1": {
+      "declarants": [
+        "Claude",
+        "Dominique"
+      ],
+      "personnes_a_charge": [
+        "Camille"
+      ]
+    }
+  },
+  "individus": {
+    "Camille": {
+      "handicap": {
+        "2025-01": false
+      },
+      "salaire_de_base": {
+        "2025-01": 0.0
+      }
+    },
+    "Claude": {
+      "handicap": {
+        "2025-01": false
+      },
+      "salaire_de_base": {
+        "2025-01": 1801.8
+      }
+    },
+    "Dominique": {
+      "handicap": {
+        "2025-01": false
+      },
+      "salaire_de_base": {
+        "2025-01": 1801.8
+      }
+    }
+  },
+  "menages": {
+    "menage_1": {
+      "coloc": {
+        "2025-01": false
+      },
+      "conjoint": [
+        "Dominique"
+      ],
+      "depcom": {
+        "2025-01": "01317"
+      },
+      "enfants": [
+        "Camille"
+      ],
+      "logement_conventionne": {
+        "2025-01": true
+      },
+      "loyer": {
+        "2025-01": 366.07
+      },
+      "personne_de_reference": [
+        "Claude"
+      ],
+      "statut_occupation_logement": {
+        "2025-01": "locataire_vide"
+      },
+      "zone_apl": {
+        "2025-01": "zone_3"
+      }
+    }
+  }
+}
