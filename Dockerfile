@@ -1,32 +1,25 @@
 ARG PYTHON_IMAGE=python:3.11-slim
 
 FROM $PYTHON_IMAGE AS base
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    dumb-init \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
 
 # All deps stage
 FROM base AS deps
 WORKDIR /app
+
 # Install build dependencies for compiling Python packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     python3-dev \
+    # Clean up apt cache to reduce image size
     && rm -rf /var/lib/apt/lists/*
 
-# Install Poetry temporarily to export requirements
+# Install Poetry and project dependencies
 RUN pip install poetry==1.8.3
 COPY pyproject.toml poetry.lock ./
-RUN poetry export -f requirements.txt --output requirements.txt --only=main --without-hashes
-RUN python -m venv /app/venv && \
-    /app/venv/bin/pip install --no-cache-dir -r requirements.txt
 
-# Build stage
-FROM base AS build
-WORKDIR /app
-COPY --from=deps /app/venv /app/venv
-COPY . .
+# Configure Poetry to not create virtual environment and install globally
+RUN poetry config virtualenvs.create false
+RUN poetry install --no-root --only=main
 
 # Production stage
 FROM base AS production
@@ -35,17 +28,14 @@ WORKDIR /app
 
 # Create non-root user
 RUN groupadd -g 1001 python && \
-    useradd -r -u 1001 -g python python
+    useradd -r -u 1001 -g python openfisca && \
+    chown -R openfisca:python /app
 
-# Copy virtual environment and app code
-COPY --from=build --chown=python:python /app/venv /app/venv
-COPY --from=build --chown=python:python /app/aides_calculatrice_back /app/aides_calculatrice_back
-COPY --from=build --chown=python:python /app/pyproject.toml ./
+# Copy the installed packages from deps stage
+COPY --from=deps /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
+COPY --from=deps /usr/local/bin /usr/local/bin
 
-# Make sure we use venv
-ENV PATH="/app/venv/bin:$PATH"
-
-USER python
+USER openfisca
 EXPOSE $PORT
 
-CMD ["dumb-init", "openfisca", "serve", "--country-package", "openfisca_france", "--bind", "0.0.0.0:5000", "--timeout", "120"]
+CMD ["openfisca", "serve", "--country-package", "openfisca_france", "--bind", "0.0.0.0:5000", "--timeout", "120"]
