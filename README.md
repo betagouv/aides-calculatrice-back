@@ -72,3 +72,9 @@ Pour exécuter avec Jupyter et dans un navigateur local un notebook tel que `apl
 ```bash
 poetry run jupyter notebook ./notebooks/apl_logement_ordinaire.ipynb
 ```
+
+## Exécution de l'application d'explicabilité streamlit
+
+```bash
+poetry run streamlit run app.py
+```
