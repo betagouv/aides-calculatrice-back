@@ -26,6 +26,7 @@ ipykernel = "^6.29.5"
 pandas = "^2.2.3"
 jupyter = "^1.1.1"
 ipywidgets = "^8.1.7"
+streamlit = "^1.49.1"
 
 [build-system]
 requires = ["poetry-core"]
